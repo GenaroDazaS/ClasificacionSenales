@@ -65,9 +65,10 @@ def inject_css() -> None:
         .info-pill { background: #DBEAFE; color: #1E40AF !important; }
 
         .small-muted {
-            color: #D7E3F5 !important;
-            font-size: 0.92rem;
-        }
+    color: #E5E7EB !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
 
         div[data-testid="stMetric"] {
             background: rgba(255,255,255,0.08);
@@ -198,6 +199,19 @@ section[data-testid="stSidebar"] .stButton > button {
 section[data-testid="stSidebar"] .stButton > button:hover {
     background: linear-gradient(135deg, #0EA5E9, #1D4ED8) !important;
     color: #FFFFFF !important;
+}
+
+/* Textos secundarios y captions */
+div[data-testid="stCaptionContainer"],
+div[data-testid="stCaptionContainer"] p,
+div[data-testid="stCaptionContainer"] span {
+    color: #E5E7EB !important;
+}
+
+.caption,
+small,
+small * {
+    color: #E5E7EB !important;
 }
         </style>
         """,
