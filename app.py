@@ -98,7 +98,25 @@ if page == "Estudiante":
 
     if st.session_state.student is None:
         st.subheader("Registro del estudiante")
-        st.info("Los datos registrados se usarán únicamente con fines académicos para identificar el desempeño en la actividad.")
+        st.markdown(
+    """
+    <div style="
+        color: #F8FAFC;
+        background: rgba(15, 23, 42, 0.88);
+        border: 1px solid rgba(56, 189, 248, 0.45);
+        border-left: 5px solid #38BDF8;
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        margin-top: 0.7rem;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+    ">
+        Los datos registrados se usarán únicamente con fines académicos para identificar el desempeño en la actividad.
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
         with st.form("student_registration"):
             col1, col2 = st.columns(2)
             with col1:
