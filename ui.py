@@ -157,6 +157,48 @@ def inject_css() -> None:
         div[data-testid="stDataFrame"] {
             color: #0F172A !important;
         }
+
+        /* Barra lateral izquierda */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0F172A 0%, #111827 55%, #020617 100%) !important;
+    color: #F8FAFC !important;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #F8FAFC !important;
+}
+
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] div {
+    color: #F8FAFC !important;
+}
+
+/* Inputs dentro de la barra lateral */
+section[data-testid="stSidebar"] input,
+section[data-testid="stSidebar"] textarea {
+    color: #F8FAFC !important;
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    border: 1px solid rgba(148, 163, 184, 0.65) !important;
+}
+
+/* Selectbox y opciones visibles en la barra lateral */
+section[data-testid="stSidebar"] div[data-testid="stSelectbox"] {
+    color: #F8FAFC !important;
+}
+
+/* Botones en la barra lateral */
+section[data-testid="stSidebar"] .stButton > button {
+    background: linear-gradient(135deg, #38BDF8, #2563EB) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
+}
+
+section[data-testid="stSidebar"] .stButton > button:hover {
+    background: linear-gradient(135deg, #0EA5E9, #1D4ED8) !important;
+    color: #FFFFFF !important;
+}
         </style>
         """,
         unsafe_allow_html=True,
