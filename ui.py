@@ -17,8 +17,21 @@ def inject_css() -> None:
             background: radial-gradient(circle at top left, #13294B 0%, #08111F 45%, #050A12 100%);
             color: #F4F7FB;
         }
-        h1, h2, h3 { color: #F4F7FB !important; }
-        .block-container { padding-top: 2rem; padding-bottom: 3rem; max-width: 1250px; }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #F4F7FB !important;
+        }
+
+        p, span, label, div {
+            color: #F4F7FB;
+        }
+
+        .block-container {
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+            max-width: 1250px;
+        }
+
         .hero-card {
             padding: 1.3rem 1.5rem;
             border-radius: 22px;
@@ -27,6 +40,7 @@ def inject_css() -> None:
             box-shadow: 0 18px 50px rgba(0,0,0,0.25);
             margin-bottom: 1rem;
         }
+
         .game-card {
             padding: 1.2rem;
             border-radius: 18px;
@@ -35,6 +49,7 @@ def inject_css() -> None:
             box-shadow: 0 12px 30px rgba(0,0,0,0.18);
             margin-bottom: 1rem;
         }
+
         .success-pill, .danger-pill, .warn-pill, .info-pill {
             display: inline-block;
             padding: 0.22rem 0.55rem;
@@ -43,28 +58,104 @@ def inject_css() -> None:
             font-size: 0.85rem;
             margin: 0.1rem 0;
         }
-        .success-pill { background: #DCFCE7; color: #166534; }
-        .danger-pill { background: #FEE2E2; color: #991B1B; }
-        .warn-pill { background: #FEF3C7; color: #92400E; }
-        .info-pill { background: #DBEAFE; color: #1E40AF; }
-        .small-muted { color: #B8C4D6; font-size: 0.92rem; }
+
+        .success-pill { background: #DCFCE7; color: #166534 !important; }
+        .danger-pill { background: #FEE2E2; color: #991B1B !important; }
+        .warn-pill { background: #FEF3C7; color: #92400E !important; }
+        .info-pill { background: #DBEAFE; color: #1E40AF !important; }
+
+        .small-muted {
+            color: #D7E3F5 !important;
+            font-size: 0.92rem;
+        }
+
         div[data-testid="stMetric"] {
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.12);
             padding: 1rem;
             border-radius: 16px;
         }
-        .stButton>button {
-            border-radius: 999px;
-            font-weight: 700;
-            border: 0;
-            background: linear-gradient(135deg, #38BDF8, #2563EB);
-            color: white;
-            padding: 0.6rem 1.2rem;
+
+        /* Etiquetas de campos */
+        div[data-testid="stTextInput"] label,
+        div[data-testid="stTextArea"] label,
+        div[data-testid="stSelectbox"] label,
+        div[data-testid="stRadio"] label,
+        div[data-testid="stDateInput"] label,
+        div[data-testid="stTimeInput"] label,
+        div[data-testid="stCheckbox"] label {
+            color: #F4F7FB !important;
+            font-weight: 700 !important;
         }
-        .stDownloadButton>button {
-            border-radius: 999px;
-            font-weight: 700;
+
+        /* Texto dentro de inputs */
+        div[data-testid="stTextInput"] input,
+        div[data-testid="stTextArea"] textarea {
+            color: #F8FAFC !important;
+            background-color: rgba(15, 23, 42, 0.95) !important;
+            border: 1px solid rgba(148, 163, 184, 0.55) !important;
+            border-radius: 12px !important;
+        }
+
+        div[data-testid="stTextInput"] input::placeholder,
+        div[data-testid="stTextArea"] textarea::placeholder {
+            color: #CBD5E1 !important;
+        }
+
+        /* Radio buttons y opciones */
+        div[data-testid="stRadio"] p,
+        div[data-testid="stRadio"] span {
+            color: #F4F7FB !important;
+        }
+
+        /* Botones */
+        .stButton > button {
+            border-radius: 999px !important;
+            font-weight: 800 !important;
+            border: 1px solid rgba(255,255,255,0.18) !important;
+            background: linear-gradient(135deg, #38BDF8, #2563EB) !important;
+            color: #FFFFFF !important;
+            padding: 0.65rem 1.25rem !important;
+            box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35) !important;
+        }
+
+        .stButton > button:hover {
+            background: linear-gradient(135deg, #0EA5E9, #1D4ED8) !important;
+            color: #FFFFFF !important;
+            border: 1px solid rgba(255,255,255,0.35) !important;
+        }
+
+        .stButton > button:focus {
+            color: #FFFFFF !important;
+            border: 1px solid rgba(255,255,255,0.45) !important;
+            box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.35) !important;
+        }
+
+        .stDownloadButton > button {
+            border-radius: 999px !important;
+            font-weight: 800 !important;
+            color: #FFFFFF !important;
+            background: linear-gradient(135deg, #22C55E, #15803D) !important;
+            border: 1px solid rgba(255,255,255,0.18) !important;
+        }
+
+        .stDownloadButton > button:hover {
+            color: #FFFFFF !important;
+            background: linear-gradient(135deg, #16A34A, #166534) !important;
+        }
+
+        /* Alertas */
+        div[data-testid="stAlert"] {
+            color: #0F172A !important;
+        }
+
+        div[data-testid="stAlert"] p {
+            color: #0F172A !important;
+        }
+
+        /* Tablas */
+        div[data-testid="stDataFrame"] {
+            color: #0F172A !important;
         }
         </style>
         """,
